@@ -1,4 +1,4 @@
-const DeviceReport = require("../models/DeviceReport")
+const DeviceReport = require("../models/deviceReport")
 const { validationResult } = require("express-validator")
 
 // Create new device report
@@ -169,4 +169,3 @@ module.exports = {
   updateDeviceReport,
   deleteDeviceReport,
 }
-
