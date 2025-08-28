@@ -1,0 +1,42 @@
+{
+  "name": "device-reports-api",
+  "version": "1.0.0",
+  "description": "Production-ready Node.js + Express + MongoDB API for device issue reports",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "samrat": "npm run dev --prefix ./samrat",
+    "build": "npm run build --prefix ./samrat",
+    "dev": "concurrently \"npm run start\" \"npm run samrat\"",
+    "test": "jest"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "api",
+    "device-reports"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "concurrently": "^9.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "file-saver": "^2.0.5",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.5.0"
+  },
+  "devDependencies": {
+    "jest": "^29.6.2",
+    "nodemon": "^3.0.1",
+    "supertest": "^6.3.3"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
