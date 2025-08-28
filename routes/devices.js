@@ -7,8 +7,9 @@ const {
   deleteDeviceReport,
 } = require("../controllers/deviceController");
 
-const router = express.Router();
 
+const router = express.Router();
+const auth = require("../middleware/auth");
 // POST /api/devices/report - Create new device report
 router.post("/report", createDeviceReport);
 
@@ -19,7 +20,7 @@ router.get("/reports", getDeviceReports);
 router.get("/reports/:id", getDeviceReportById);
 
 
-const auth = require("../middleware/auth");
+
 // PUT /api/devices/reports/:id - Update device report (admin only)
 router.put("/reports/:id", auth, updateDeviceReport);
 
@@ -27,3 +28,4 @@ router.put("/reports/:id", auth, updateDeviceReport);
 router.delete("/reports/:id", auth, deleteDeviceReport);
 
 module.exports = router;
+
